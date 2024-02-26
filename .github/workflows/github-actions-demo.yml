@@ -18,6 +18,11 @@ jobs:
           echo "This job was triggered by event: ${{ github.event_name }} :rocket:"
           echo "The name of your branch is ${{ github.ref }} and your repository is ."
 
-      - uses: |
+      - uses: actions/checkout@v3.3.0
+
+      - name: List the files in the repository
+        run: |
+          echo "The repository ${{ github.repository }} contains the following files: "
+          tree
           
           
